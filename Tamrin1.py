@@ -6,5 +6,6 @@ def seprator(N):
     for i in N:
         s+= int(i)
     return seprator(str(s))
+
 num=input("")
 print(seprator(num),end='')
