@@ -26,5 +26,3 @@ if(result1==-1):
     print(-1,end='')
 else:
     print(result1[0],result1[1],end='')
-# print(tedad(a,b,c),end='')
-# print(1,2,3)
