@@ -113,3 +113,6 @@ for k in low_balance.keys():
 
 print(transfer_list)
 
+with open('transactions.txt', 'w') as Tr:
+    for listitem in transfer_list:
+        Tr.write('%s\n' % listitem)
