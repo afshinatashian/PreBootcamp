@@ -94,7 +94,7 @@ average_balance=sum(balance_dict.values())/len(balance_dict)
 low_balance={}
 for k,v in balance_dict.items():
     for b in balance_dict.values():
-        if b < average_balance:
+        if b < average_balance/10:
             key_b=get_key(b)
             low_balance[key_b] = b
 
@@ -108,7 +108,8 @@ for k in low_balance.keys():
                 0.01,
                 "9dd506d3368f7aa73452bf667a3211a0c733ae5f34c0bfbfd1674ea1fe83152f",
                 "0xf63B5C8B646eBcF531D8C3FE194EcC20F2359118",
-                -_nounce))
+                _nounce))
     _nounce += 1
 
 print(transfer_list)
+
