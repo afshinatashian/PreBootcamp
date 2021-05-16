@@ -1,5 +1,5 @@
 from web3 import Web3
-# import json
+import json
 
 MAIN_URL = "https://mainnet.infura.io/v3/bb055071bba745488eda95512a6d0035"
 URL = 'https://8cf41633363c49a584fbfb0b556a5927.ropsten.rpc.rivet.cloud/'
@@ -75,7 +75,9 @@ def get_key(val):
 
 balance_dict={}
 # account_list=["0xAf77fB90baCE88edad8be674232C4a072BdC29A3" , "0x196eaeBfCF7beaFe7C5C52d3412BB677827924e9" , "0x4dA5d4E0b0AfE7663fdcAB76c2C1e91e416A80bc"]
-account_list=eval(input())
+# account_list=input()
+with open("wallets.json", 'r') as f1:
+    account_list = (json.loads(f1.read()))
 for i in account_list:
     balance_dict[i] = balance(i)
     # balance_list.append(balance(i))
